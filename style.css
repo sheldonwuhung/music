@@ -1,0 +1,18 @@
+.bor * {border:solid 1px black}
+h1, h2, h3, div{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: .125px black;
+}
+audio {
+    -webkit-text-stroke: 0;
+}
+div {
+    font-size: large;
+}
+body {
+    /* background-color: rgb(112, 84, 112); */
+    background-image: url(Assets/Images/a.jpg);
+    background-size: 150vw;
+    background-position: -25vh;
+}

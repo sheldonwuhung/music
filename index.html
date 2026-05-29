@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shelly's Music!</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="w-screen flex justify-center text-center">
+        <div class="w-[50%] flex flex-col py-5">
+            <h1 class="text-3xl font-bold">
+                Shelly's Music!
+            </h1>
+            <div class="grid grid-cols-1 gap-x-8 md:grid-cols-2">
+                <div class="py-[10px]">
+                    <h2 class="text-2xl underline">Guitar</h2>
+                    <div id="guitar-list" class="py-[10px]"></div>
+                </div>
+                <div class="py-[10px]">
+                    <h2 class="text-2xl underline">Songs</h2>
+                    <div id="songs-list" class="py-[10px]"></div>
+                </div>
+            </div>
+        </div>
+        <script src="scripts.js" defer></script>
+    </body>   
+</html>
