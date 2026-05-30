@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Turret+Road:wght@200;300;400;500;700;800&family=Zen+Dots&display=swap" rel="stylesheet">        <link rel="stylesheet" href="style.css">
     </head>
     <body class="w-screen flex justify-center">
-        <div class="w-[75%] flex flex-col py-10 z-0 mb-[50px]">
+        <div class="w-[75%] flex flex-col py-10 z-0 mb-[50px] text-xs md:text-md lg:text-lg">
             <h1 class="text-3xl font-bold animated-gradient-text zen-dots-regular">
                 Shelly's Music!
             </h1>
@@ -26,8 +26,8 @@
                 </div>
             </div>
         </div>
-        <div id="main-player" class="w-[100%] h-[7.5%] py-[10px] flex justify-center items-center turret-road-bold">
-            <div class="card w-[75%] h-[100%] flex">
+        <div id="main-player" class="w-[100%] h-[7.5%] py-[10px] flex justify-center items-center turret-road-bold text-xs md:text-lg lg:text-2xl">
+            <div class="w-[100%] md:w-[75%] card h-[100%] flex">
                 <audio id="main-audio" loop><source src="" type="audio/mpeg"></audio>
                 <button id="main-interact" class="interact material-symbols-outlined w-[5%]">play_arrow</button>
                 <h3 id="main-track" class="px-[10px] w-[20%]">Choose a Track</h3>
@@ -37,8 +37,8 @@
                     <input class="slider" type="range" id="progress-slider" value="0" min="0" step="1">
                 </div>
                 <h3 id="right-time" class="pr-[20px] w-[10%] text-end">0:00</h3>
-                <button id="volume-icon" class="material-symbols-outlined w-[5%]">volume_up</button>
-                <div id="volume-container" class="w-[15%] h-[75%] flex items-center">
+                <button id="volume-icon" class="hidden md:flex material-symbols-outlined hidden w-[0%] md:flex md:w-[5%]">volume_up</button>
+                <div id="volume-container" class="hidden md:flex w-[15%] h-[75%] flex items-center">
                     <div class="bar" id="volume-bar"></div>
                     <input class="slider" type="range" id="volume-slider" value="0" min="0" step="1">
                 </div>

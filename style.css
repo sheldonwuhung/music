@@ -27,9 +27,9 @@ h2, h3, div{
     -webkit-text-stroke: .125px black;
 }
 
-div {
+/* div {
     font-size: large;
-}
+} */
 
 body {
     /* background-color: rgb(112, 84, 112); */
@@ -82,12 +82,12 @@ body {
     .card {
         background-color: rgba(0,0,0,0);
     }
-    div {
+    /* div {
         font-size: larger;
     }
     .interact {
         font-size: xx-large;
-    }
+    } */
 }
 
 #progress-container, #volume-container {
