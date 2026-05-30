@@ -176,7 +176,7 @@ function interactClick(button) {
         const element = interactButtons[i];
         const card = element.parentElement;
         if (element !== currentInteraction) element.innerHTML = "play_arrow";
-        if (card !== currentCard && card.classList.contains('card-selected')) card.classList.remove('card-selected');
+        if (button !== mainInteraction && card !== currentCard && card.classList.contains('card-selected')) card.classList.remove('card-selected');
     }
 
 }
