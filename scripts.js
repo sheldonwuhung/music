@@ -23,6 +23,9 @@ const songAudioFiles = [
     'busy beach - Trashy Collector.mp3',
 ];
 
+const note = document.getElementById('note');
+const titleHeader = document.getElementById('title');
+
 const hoverText = document.getElementById('hover-text');
 const mainInteract = document.getElementById('main-interact');
 

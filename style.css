@@ -15,6 +15,28 @@
   font-style: normal;
 }
 
+@media screen and (width >= 420px) {
+    #note {
+        z-index: 1;
+        width: 1.5vw;
+        min-width: 20px;
+        max-width: 100px;
+        height: auto;
+        transform: translate(300px) rotate(-15deg);
+    }
+}
+
+@media screen and (width < 420px) {
+    #note {
+        z-index: 1;
+        width: 1.5vw;
+        min-width: 10px;
+        height: auto;
+        display: none;
+    }
+}
+
+
 html {
     scrollbar-color: #888888 #555555; 
     scrollbar-width: thin; 
@@ -33,9 +55,9 @@ h2, h3, div{
 
 body {
     /* background-color: rgb(112, 84, 112); */
-    background-image: url(Assets/Images/a.jpg);
-    background-size: 150vw;
-    background-position: -25vh;
+    background-image: url(Assets/Images/guitar2.jpg);
+    background-size:cover;
+    /* background-position: 0vw -20vh; */
 }
 
 .card {
