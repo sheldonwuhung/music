@@ -119,7 +119,9 @@ function formatDuration(duration) {
 
 function interactMouseEnter(button) {
     const rect = button.getBoundingClientRect();
-    hoverText.textContent = 'Play';
+    if (button.innerHTML == 'play_arrow') hoverText.textContent = 'Play';
+    else hoverText.textContent = 'Pause';
+
     hoverText.style.left = `${rect.right + 8}px`;
     hoverText.style.top = `${rect.top}px`;
     hoverText.style.visibility = 'visible';
@@ -193,9 +195,11 @@ function main() {
     populateList(songAudioFiles, 'songs-list', "Songs")
 
     interactButtons.forEach(button => {
-        button.addEventListener('mouseenter', () => interactMouseEnter(button));
-        button.addEventListener('mousemove', positionHoverText);
-        button.addEventListener('mouseleave', interactMouseLeave);
+        if (window.innerWidth > 768) {
+            button.addEventListener('mouseenter', () => interactMouseEnter(button));
+            button.addEventListener('mousemove', positionHoverText);
+            button.addEventListener('mouseleave', interactMouseLeave);
+        }
         button.addEventListener('click', () => interactClick(button))
     });
 
