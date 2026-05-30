@@ -5,24 +5,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Shelly's Music!</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Turret+Road:wght@200;300;400;500;700;800&family=Zen+Dots&display=swap" rel="stylesheet">        <link rel="stylesheet" href="style.css">
     </head>
-    <body class="w-screen flex justify-center text-center">
-        <div class="w-[50%] flex flex-col py-5">
-            <h1 class="text-3xl font-bold">
+    <body class="w-screen flex justify-center">
+        <div class="w-[75%] flex flex-col py-5 z-0 mb-[50px]">
+            <h1 class="text-3xl font-bold animated-gradient-text zen-dots-regular">
                 Shelly's Music!
             </h1>
-            <div class="grid grid-cols-1 gap-x-8 md:grid-cols-2">
+            <div class="grid grid-cols-1 gap-x-8 md:grid-cols-2 turret-road-bold">
                 <div class="py-[10px]">
-                    <h2 class="text-2xl underline">Guitar</h2>
+                    <h2 class="text-2xl">Guitar</h2>
                     <div id="guitar-list" class="py-[10px]"></div>
                 </div>
                 <div class="py-[10px]">
-                    <h2 class="text-2xl underline">Songs</h2>
+                    <h2 class="text-2xl">Songs</h2>
                     <div id="songs-list" class="py-[10px]"></div>
                 </div>
             </div>
         </div>
+        <div id="main-player" class="w-[100%] h-[7.5%] py-[10px] flex justify-center items-center turret-road-bold">
+            <div class="card w-[75%] h-[100%] flex">
+                <audio id="main-audio" loop><source src="" type="audio/mpeg"></audio>
+                <button id="main-interact" class="interact material-symbols-outlined w-[5%]">play_arrow</button>
+                <h3 id="main-track" class="px-[10px] w-[20%]">Choose a Track</h3>
+                <h3 id="left-time" class="w-[10%]">0:00</h3>
+                <div id="progress-container" class="w-[45%] h-[75%] flex items-center">
+                    <div class="bar" id="progress-bar"></div>
+                    <input class="slider" type="range" id="progress-slider" value="0" min="0" step="1">
+                </div>
+                <h3 id="right-time" class="pr-[20px] w-[10%] text-end">0:00</h3>
+                <button id="volume-icon" class="material-symbols-outlined w-[5%]">volume_up</button>
+                <div id="volume-container" class="w-[15%] h-[75%] flex items-center">
+                    <div class="bar" id="volume-bar"></div>
+                    <input class="slider" type="range" id="volume-slider" value="0" min="0" step="1">
+                </div>
+            </div>
+        </div>
+        <div id="hover-text" class="z-1 absolute turret-road-bold"><h3>test</h3></div>
         <script src="scripts.js" defer></script>
     </body>   
 </html>
