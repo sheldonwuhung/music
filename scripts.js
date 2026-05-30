@@ -140,7 +140,7 @@ function interactClick(button) {
 
     //set current interaction
     if (currentInteraction === null || button !== mainInteraction) currentInteraction = button;
-    console.log(previousInteraction, currentInteraction)
+    // console.log(previousInteraction, currentInteraction)
 
     //no selected track
     if (currentInteraction === null) {console.log("choose a track!"); return;}
@@ -227,6 +227,17 @@ function main() {
         if (mainAudio.volume <= 0.5 && mainAudio.volume > 0) volumeIcon.innerHTML = 'volume_down';
         else if (mainAudio.volume <= 1 && mainAudio.volume > .5) volumeIcon.innerHTML = 'volume_up';
         else if (mainAudio.volume <= 0) volumeIcon.innerHTML = 'volume_off';
+    });
+
+    mainAudio.addEventListener('ended', () => {
+        let nextInteraction = null
+        for (let i = 1; i < interactButtons.length; i++) {
+            if (currentInteraction === interactButtons[i]) {
+                if (i == interactButtons.length - 1) nextInteraction = interactButtons[1];
+                else nextInteraction = interactButtons[i + 1];
+            }
+        }
+        if (nextInteraction !== null) interactClick(nextInteraction);
     });
 
 }
