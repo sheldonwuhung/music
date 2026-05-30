@@ -73,7 +73,7 @@ function createAudioCard(filename, folder) {
     audio.preload = 'metadata';
     audio.addEventListener('loadedmetadata', () => {
         const time = document.createElement('span');
-        time.className = 'pr-[20px] w-[20%] text-end'
+        time.className = 'pr-[20px] w-[13%] sm:w-[10%] md:w-[12.5%] xl:w-[10%] text-start'
         time.textContent = formatDuration(audio.duration);
         card.appendChild(time);
     });
